@@ -28,7 +28,7 @@ colnames(merged_activity) <- c("Activity_Code","Activity")
 HAR <- cbind(s,merged_activity,x)
 
 #write out a text file
-write.table(HAR, file="HAR.txt")
+#write.table(HAR, file="HAR.txt")
 
 #copied from here https://class.coursera.org/getdata-002/forum/thread?thread_id=398#post-1518 then tweaked - finding mean and sd columns
 toMatch <- c(".*mean\\(\\).*-X$", ".*std\\(\\).*-X$")
@@ -44,7 +44,7 @@ HAR_tidy <- cbind(HAR_tidy1,HAR_tidy2)
 summary(HAR_tidy)
 
 #write out the tidy text file
-write.table(HAR_tidy, file="HAR_tidy.txt")
+#write.table(HAR_tidy, file="HAR_tidy.txt")
 
 #melt and decast to reshape
 install.packages("reshape2")
